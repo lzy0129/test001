@@ -36,5 +36,17 @@ git的分支操作：
 	6.手动除理冲突，然后再次提交
 
 把代码提交的github（当做git服务器来用）：
-	git push https://github.com/lzy0129/test112.git master
+	1.git push https://github.com/lzy0129/test112.git master
 	用的是push的命令，然后加github仓库的命令，后面的master表示加到了github的master分支
+	2.git pull https://github.com/lzy0129/test112.git master
+	这个是别人用来下载代码的（注意这种需要在本地初始化一个新的仓库）
+	3.git clone https://github.com/lzy0129/test112.git
+	这个一般在开发过程中是不使用的，并且多次调用时会覆盖的
+
+	以上是使用ssh进行的代码上传和粘贴
+
+	下面是使用ssh的方法
+	生成ssh的办法：ssh-keygen -t rsa -C "850037249@qq.com"
+	记得把公钥放到github上就可以了
+
+	git push git@github.com:lzy0129/test001.git master
