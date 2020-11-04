@@ -1,0 +1,40 @@
+
+初始化git ：git init
+
+配置用户名： git config --global user.name "lzy0129"
+配置邮箱： git config --global user.email "850037249@qq.com"
+
+把需要的文件放入到仓库
+1.把文件放到门口     git add ./readme.md
+2.把门口的东西放入房间内    git commit -m "我们完成了第一个功能"
+这里的这个 -m表示提交的文件的附带信息，用于描述我们对这个文件做了什么
+
+查看状态  git status
+
+
+一次直接放到仓库的里面   git commit --all -m "信息"
+
+清除屏幕的命令  : clear
+查看版本信息的命令  ： git log
+简化版的 查看版本信息是  ：git log --online
+回退版本的操作，最新的是版本0，上一条是版本1
+所以 git reset --hard Head~0   还是当前的版本（上次的提交的状态）
+    git reset --hard Head~1  回退到上一个版本
+
+
+也可以根据唯一的标识直接回退，这样子比较准确，不用自己数，并且很直观
+例如：git reset --hard c6f6c8b   后面这个是可以直接根据log展示版本获得的
+
+查看原来的全部的修改内容 git reflog
+
+git的分支操作：
+	1.git branch name   创建一个叫做name的分支
+	2.git branch 是用于查看分支的情况，最初的分支叫做branch
+	3.git checkout dev  就是用于切换分支
+	4.git merge dev 就是把dev的分支合并到了主分支master上
+	5.git branch -d dev 就是把dev的分支删掉了
+	6.手动除理冲突，然后再次提交
+
+把代码提交的github（当做git服务器来用）：
+	git push https://github.com/lzy0129/test112.git master
+	用的是push的命令，然后加github仓库的命令，后面的master表示加到了github的master分支
